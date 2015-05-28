@@ -7,13 +7,11 @@
 </head>
 
 
-
-<div class="bootstrapNavbar" >
-	<navbar> </navbar>
-</div>
-
-
 <body>
+	<div class="bootstrapNavbar">
+		<navbar> </navbar>
+	</div>
+	{{currentUser}}
 	<div class="container">
 		<div ng-view></div>
 	</div>
@@ -29,6 +27,9 @@
 
 <!--controllers-->
 <script src= "views/home/home.controller.js"></script>
+<script src="views/login/login.controller.js"></script>
+<script src="views/signup/signup.controller.js"></script>
+<script src="views/profile/profile.controller.js"></script>
 
 <!--services-->
 
