@@ -6,6 +6,7 @@ angular.module('app')
 				.success(function(response){
 					console.log(response);
 					$rootScope.currentUser=user; 
+					$location.url('/profile');
 				});
 		};
 

@@ -8,10 +8,9 @@
 
 
 <body>
-	<div class="bootstrapNavbar">
+	<div class="bootstrapNavbar" ng-controller="NavbarController">
 		<navbar> </navbar>
 	</div>
-	{{currentUser}}
 	<div class="container">
 		<div ng-view></div>
 	</div>
@@ -30,6 +29,7 @@
 <script src="views/login/login.controller.js"></script>
 <script src="views/signup/signup.controller.js"></script>
 <script src="views/profile/profile.controller.js"></script>
+<script src="components/navbar/navbar.controller.js"></script>
 
 <!--services-->
 

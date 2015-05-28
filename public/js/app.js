@@ -44,4 +44,4 @@ function checkLogin($q, $timeout,$http,$location,$rootScope){
 		}
 	});
 	return deferred.promise
-}
+};

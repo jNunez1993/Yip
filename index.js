@@ -87,7 +87,13 @@ app.post('/signup',function(req,res){
 });
 
 
-app.get('/loggedin', function(res,req){
+app.post('/logout',function(req,res){
+	req.logOut();
+	res.send(200)
+});
+
+
+app.get('/loggedin', function(req,res){
 	res.send(req.isAuthenticated() ? req.user : '0');
 });
 
