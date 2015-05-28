@@ -1,0 +1,25 @@
+{
+  "name": "Yip",
+  "version": "1.0.0",
+  "description": "Angular app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jNunez1993/Yip"
+  },
+  "author": "Juan Nunez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jNunez1993/Yip/issues"
+  },
+  "homepage": "https://github.com/jNunez1993/Yip",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.4",
+    "mongoose": "^4.0.3",
+    "passport": "^0.2.2"
+  }
+}
