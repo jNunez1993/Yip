@@ -13,8 +13,8 @@
       <ul class="nav navbar-nav navbar-right">
           <li ng-show="!currentUser"><a href="#/signup">Sign up</a></li>
           <li ng-show="!currentUser"><a href="#/login">Login</a></li>
-          <li ng-show="currentUser" ng-click="logout()"><a href="#/home"> logout </a></li>
           <li ng-show="currentUser"><a href="#/profile"> Profile </a></li>
+           <li ng-show="currentUser" ng-click="logout()"><a href="#/home"> Logout </a></li>
           <li ng-show="currentUser" class="navbarUsername"> Hello {{currentUser.username}} </li>
       </ul>
       

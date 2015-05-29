@@ -52,6 +52,7 @@ var auth = function(req,res,next){
 };
 
 
+/*****************SCHEMA/MODELS********************************/
 
 var UserSchema = new Schema({
 	username: String,
@@ -63,6 +64,14 @@ var UserModel = mongoose.model('User',UserSchema);
 
 
 
+var FeedSchema = new Schema({
+	post: String
+});
+
+var FeedModel = mongoose.model('Feed',FeedSchema);
+/**************************************************************/
+
+/**************USER ACTIONS *************************/
 
 app.post("/login",passport.authenticate('local'),function(req,res){
 	res.json(req.user);
@@ -89,12 +98,42 @@ app.post('/signup',function(req,res){
 
 app.post('/logout',function(req,res){
 	req.logOut();
-	res.send(200)
+	res.sendStatus(200)
 });
 
 
 app.get('/loggedin', function(req,res){
 	res.send(req.isAuthenticated() ? req.user : '0');
+});
+/**************************************************************/
+
+app.post('/yip',function(req,res){
+	var userID=req.user._id;
+	UserModel.findById(userID,function(err,user){
+		if(err) res.sendStatus(400);
+		else{
+			user.posts.push(req.body.post);
+			user.save(function(err,user){
+				if(err) res.sendStatus(400);
+				else res.sendStatus(200);
+			});
+		}
+	});
+});
+
+
+app.post('/feed',function(req,res){
+	var newPost= new FeedModel(req.body);
+	newPost.save(function(err,post){
+		if(err) res.sendStatus(400);
+		else res.sendStatus(200);
+	})
+});
+
+app.get('/feed',function(req,res){
+	FeedModel.find(function(err,obj){
+		res.send(obj);
+	});
 });
 
 

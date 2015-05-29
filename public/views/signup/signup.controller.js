@@ -5,7 +5,13 @@ angular.module('app')
 			var user= {username:$scope.username, password:$scope.password};
 			$http.post('/signup',user)
 				.success(function(response){
-					console.log(response);
+					if(response==="User already exists"){
+						$scope.alert="User already exists";
+					}
+					else{
+						$rootScope.currentUser=user;
+						$location.url('/profile');
+					}
 				});
 		};
 		

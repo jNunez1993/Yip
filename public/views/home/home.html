@@ -1,1 +1,16 @@
-<h1> {{hello}} </h1>
+<div class="initialHome" ng-show="!currentUser">
+<h1> Hello to Yip</h1>
+</div>
+
+
+
+<div class="mainHome" ng-show="currentUser"> 
+	<input type="text" ng-model="post"> </input>
+	<button class="btn btn-primary" ng-click="yip()"> post </button>
+<div class="postRegion">
+	<ul class="posts" ng-repeat="posts in feed">
+		<li> {{posts.post}} </li>
+	</ul>
+</div>
+</div>
+
