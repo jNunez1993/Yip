@@ -80,7 +80,7 @@ app.post("/login",passport.authenticate('local'),function(req,res){
 });
 
 app.post('/signup',function(req,res){
-	UserModel.findOne({username: req.body.username, password: req.body.password},function(err,user){
+	UserModel.findOne({username: req.body.username},function(err,user){
 		if(user){
 			res.send("User already exists");
 			return;
