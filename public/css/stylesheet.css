@@ -25,15 +25,14 @@ background-size: cover;
 }
 
 .postAndButton{
-	width:25em;
+	width:30em;
 	height:7.2em;
 	position:relative;
 }
 
 .postAndButton #postButton {
 	position:absolute;
-	bottom:0em;
-	right:0em;
+	top:4.8em;
 }
 
 .eachPost{
@@ -73,4 +72,9 @@ background-size: cover;
 .changePasswordForm .passwordFormBox{
 	width:100%;
 	clear:both;
+}
+
+.middleRegion{
+	margin: 0 auto;
+	width:60%;
 }

@@ -15,7 +15,11 @@ angular.module('app')
 		var promise =feedService.getFeed();
 		promise.then(
 			function(payload){
-				$scope.feed=payload.data;
+				var length=payload.data.length;
+				var start=0
+				if(length>=10)
+					start=length-10;
+				$scope.feed=payload.data.slice(start,length);
 			},
 			function(errorPayload){
 				console.log("error");
@@ -24,7 +28,7 @@ angular.module('app')
 
 
 	$scope.init = function(){
-	$scope.feed= getFeed();
+		$scope.feed= getFeed();
 	};
 
 
