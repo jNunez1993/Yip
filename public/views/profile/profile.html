@@ -1,1 +1,14 @@
-<h1> profile </h1>
+<h1> Change your password </h1>
+
+<div class="changePasswordForm">
+	<label class="passwordFormText"> Enter Current Password 
+		<input type="password" class="passwordFormBox" ng-model="currentPassword"></input>
+	</label>
+	<label class="passwordFormText"> Enter New Password
+		<input type="password" class="passwordFormBox" ng-model="newPassword0"></input>
+	</label>
+	<label class="passwordFormText"> Enter New Password Again
+		<input type="password" class="passwordFormBox" ng-model="newPassword1"></input>
+	</label>
+	<button class="btn btn-danger" ng-click="changePassword()">Submit</button>
+</div>

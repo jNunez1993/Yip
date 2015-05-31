@@ -142,5 +142,25 @@ app.get('/init',function(req,res){
 	res.send(req.user);
 });
 
+app.post('/changePassword',function(req,res){
+	var userID=req.user._id;
+	UserModel.findById(userID,function(err,user){
+		if(err) res.sendStatus(400);
+		else{
+			var currentPassword=req.body.currentPassword;
+			if(user.password===currentPassword){
+				user.password=req.body.newPassword0;
+				user.save(function(err,user){
+					if(err) res.sendStatus(400);
+					else res.send("Password changed successfully");
+				});
+			}
+			else{
+				res.send("Current Password is incorrect");
+			}
+		}
+	});
+});
+
 
 app.listen(3000);

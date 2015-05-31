@@ -1,6 +1,3 @@
-
-
-
 body{
 
 background: url('http://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-yellow-solid-color-background.jpg') no-repeat center center fixed;
@@ -65,4 +62,15 @@ background-size: cover;
 .eachPost .postName{
 	font-weight:bold;
 	position:block;
+}
+
+
+.changePasswordForm{
+	width:15em;
+	clear:both;
+}
+
+.changePasswordForm .passwordFormBox{
+	width:100%;
+	clear:both;
 }
