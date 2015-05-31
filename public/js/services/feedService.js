@@ -1,10 +1,9 @@
 angular.module('app')
-	.service('feedService',function($http){
+	.service('feedService',function($rootScope,$http){
 
-		var currentFeed;
 
 		var addToFeed = function(post){
-			$http.post('/feed',{post: post})
+			$http.post('/feed',{post: post, postedBy: $rootScope.currentUser.username})
 				.success(function(response){
 					console.log(response);
 				});
@@ -13,7 +12,7 @@ angular.module('app')
 		var getFeed = function(){
 			return $http.get('/feed')
 				.success(function(response){
-					currentFeed=response;
+					
 				});
 		};
 

@@ -5,12 +5,22 @@
 
 
 <div class="mainHome" ng-show="currentUser"> 
-	<input type="text" ng-model="post"> </input>
-	<button class="btn btn-primary" ng-click="yip()"> post </button>
-<div class="postRegion">
-	<ul class="posts" ng-repeat="posts in feed">
-		<li> {{posts.post}} </li>
-	</ul>
-</div>
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6">
+		<div class="postAndButton">
+			<textarea class="postTextArea" type="text"  maxlength="140" ng-model="post"> </textarea>
+			<button class="btn btn-primary" ng-click="yip()"> post </button>
+		</div>
+		<div class="postRegion" ng-repeat="posts in feed">
+			<div class="eachPost">
+				<div class="postContent">{{posts.post}}</div>
+				<div class="postName">{{posts.postedBy}}</div>
+				<div class="postDate">{{posts.date | date:'medium'}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+	</div>
 </div>
 

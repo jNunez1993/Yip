@@ -1,3 +1,30 @@
 .navbarUsername{
 	color:white;
 }
+
+.postTextArea {
+	height:100px;
+	width: 300px;
+	resize:none;
+}
+
+
+.eachPost{
+	width: 20em;
+	height:4em;
+	margin-top:5em;
+	margin-bottom:5em;
+}
+
+.eachPost .postName{
+	text-align:right;
+}
+
+.eachPost{
+	word-wrap: break-word;
+}
+
+.postAndButton{
+	margin-bottom:-5em;
+}
+

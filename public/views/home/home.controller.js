@@ -3,7 +3,6 @@ angular.module('app')
 
 
 	$scope.yip = function(){
-		
 		$http.post('/yip',{post:$scope.post})
 			.success(function(response){
 				feedService.addToFeed($scope.post);

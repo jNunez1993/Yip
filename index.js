@@ -57,7 +57,7 @@ var auth = function(req,res,next){
 var UserSchema = new Schema({
 	username: String,
 	password: String,
-	posts: [String]
+	posts: [String] //add date to posts
 });
 
 var UserModel = mongoose.model('User',UserSchema);
@@ -65,7 +65,9 @@ var UserModel = mongoose.model('User',UserSchema);
 
 
 var FeedSchema = new Schema({
-	post: String
+	post: String,
+	date: {type: Date , default: Date.now},
+	postedBy: String
 });
 
 var FeedModel = mongoose.model('Feed',FeedSchema);
