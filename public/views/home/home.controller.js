@@ -22,8 +22,23 @@ angular.module('app')
 			});
 		};
 
-	$scope.feed= getFeed();
 
+	$scope.init = function(){
+	$scope.feed= getFeed();
+	};
+
+
+	var getUserAfterRefresh = function(){
+		if($rootScope.currentUser===undefined || $rootScope.currentUser==='0'){
+			$http.get('/init')
+				.success(function(response){
+					console.log(response);
+					$rootScope.currentUser=response;
+				});
+			}
+		};
+
+	getUserAfterRefresh();
 
 
 });

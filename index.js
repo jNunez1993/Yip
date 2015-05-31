@@ -138,5 +138,9 @@ app.get('/feed',function(req,res){
 	});
 });
 
+app.get('/init',function(req,res){
+	res.send(req.user);
+});
+
 
 app.listen(3000);

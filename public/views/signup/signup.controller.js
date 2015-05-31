@@ -10,7 +10,7 @@ angular.module('app')
 					}
 					else{
 						$rootScope.currentUser=user;
-						$location.url('/profile');
+						$location.url('/home');
 					}
 				});
 		};
