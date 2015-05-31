@@ -1,3 +1,22 @@
+
+
+
+body{
+
+background: url('http://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-yellow-solid-color-background.jpg') no-repeat center center fixed;
+
+-moz-background-size: cover;
+
+-webkit-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+    
+}
+
+
+
 .navbarUsername{
 	color:white;
 }
@@ -8,12 +27,23 @@
 	resize:none;
 }
 
+.postAndButton{
+	width:25em;
+	height:7.2em;
+	position:relative;
+}
+
+.postAndButton #postButton {
+	position:absolute;
+	bottom:0em;
+	right:0em;
+}
 
 .eachPost{
 	width: 20em;
-	height:4em;
-	margin-top:5em;
-	margin-bottom:5em;
+	margin-top:2em;
+	margin-bottom:2em;
+	position:relative;
 }
 
 .eachPost .postName{
@@ -22,9 +52,17 @@
 
 .eachPost{
 	word-wrap: break-word;
+	text-align:justify;
+
 }
 
-.postAndButton{
-	margin-bottom:-5em;
+
+.eachPost .postDate{
+	font-style:italic;
+	
 }
 
+.eachPost .postName{
+	font-weight:bold;
+	position:block;
+}
