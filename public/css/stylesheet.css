@@ -49,7 +49,9 @@ background-size: cover;
 .eachPost{
 	word-wrap: break-word;
 	text-align:justify;
-
+	background-color:#FFE4B2;
+	padding: 4pt 4pt 4pt 4pt;
+	border-radius: 8pt;
 }
 
 
